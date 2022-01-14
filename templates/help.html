@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class='text-center'>Help</h1>
+
+    <div class='help-section'>
+        <h3>How to Convert Formula Name:</h3>
+        <div class='row'> 
+            <ol>
+                <li>Go back to main screen and click "Convert" button</li>
+                <li>Choose how you will input the formula name (NOTE - ChemCam ONLY converts FORMULA NAMES (ex: sodium chloride) to chemical formulas (ex: NaCl), not the other way around)</li>
+                <li>If you are on a mobile device you can:</li>
+                <ul>
+                    <li>Type the formula name into the textbox</li>
+                    <li>Click on the "Choose file" button and select an image of the formula name from your photo library</li>
+                    <li>Click on the "Choose file" button and take a photo of the formula name</li>
+                </ul>
+                <li>If you are on a computer you can:</li>
+                <ul>
+                    <li>Type the formula name into the textbox</li>
+                    <li>Click on the "Choose file" button and upload an image of the formula name from your file system</li>
+                </ul>
+                <li>Click the "submit" button and the chemical formula will be displayed if inputted correctly</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="help-section">
+        <h3>How to Take an Optimal Image for ChemCam:</h3>
+        <div class='row help'>
+            <ul>
+                <li>ChemCam uses <a href='https://plantcv.readthedocs.io/en/latest/binary_threshold/'>binary thresholding</a> for optimal image conversion</li>
+                <li>Due to this, it is VITAL that the image contains the formula name in BLACK computer generated text, and there is a clear white background</li>
+                <li>Ensure you are taking the photo in GOOD LIGHTING and avoid shadows</li>
+                <li>GOOD IMAGE example:</li>
+                <img class='chem-image my-2' src="{{ url_for('static', filename='img/goodImage.jpg') }}" alt="">
+                <li>BAD IMAGE example:</li>
+                <img class='chem-image my-2' src="{{ url_for('static', filename='img/badImage.jpg') }}" alt="">
+            </ul>
+        </div>
+    </div>
+
+    <div class="help-section">
+        <h3>How to View Past Conversions:</h3>
+        <div class='row help'>
+            <ul>
+                <li>Go back to the main screen and click the "Past Conversions" button</li>
+                <li>You will then be displayed with the last 10 conversions made on the website</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="help-section">
+        <h3>Supported Nomenclature:</h2>
+        <div class="row help">
+            <div class="col-3">
+                Single Element
+            </div>
+            <div class="col-9">
+                Possible input configurations:
+                {element} (eg: bromine -> Br)
+                {state} {element} (eg: liquid bromine -> Br<sub>2 (l)</sub>)
+                {element} {state} (eg: oxygen gas -> O<sub>2 (g)</sub>)
+                <ul>
+                    <li>Converts 3 types (element/state followed by element/element followed by state)</li>
+                    <li>Element can consist of any element from the periodic table</li>
+                    <li>Supports diatomic elements (eg, O<sub>2</sub>)</li>
+                    <li>States supported are solid, liquid, gas, metal, vapour, powder, flakes, solution, aqueous</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Binary Compounds (cation + nonmetal)
+            </div>
+            <div class="col-9">
+                {cation} {nonmetal}ide (eg, sodium chloride -> NaCl)
+                <ul>
+                    <li>Cation followed by non-metal</li>
+                    <li>Cation can be any ion that is positively charged</li>
+                    <li>Ending of non-metal removed and replaced with 'ide' (eg, sulfur -> sulfide)</li>
+                </ul>
+            </div>
+            <div class="col-3">
+            Compounds (cation + polyatomic anion)
+            </div>
+            <div class="col-9">
+                {cation} {polyatomic anion} (eg, aluminum hypochlorite -> Al(ClO)<sub>3</sub>)
+                <ul>
+                    <li>Cation followed by polyatomic anion</li>
+                    <li>Polyatomic anion can be anion with or without oxygen atoms</li>
+                    <li>Note - See <a href="#oxyanion-naming">oxyanion naming rules</a> for help on naming oxyanions (polyatomic anion with oxygen atoms)</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Multivalent Binary Compounds
+            </div>
+            <div class="col-9">
+                {metal} ({charge of metal}) {non-metal}ide (eg, iron (III) sulfide -> FeS<sub>3</sub>)
+                <ul>
+                    <li>Charge must be written in roman numerals and be surrounded by brackets</li>
+                    <li>Charge in brackets must be a possible charge for the metal</li>
+                    <li>Ending of non-metal is replaced with 'ide'</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Multivalent Compounds
+            </div>
+            <div class="col-9">
+                {metal} ({charge}) {polyatomic anion} (eg, iron (III) sulfate -> Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>)
+                <ul>
+                    <li>Charge must be written in roman numerals and be surrounded by brackets</li>
+                    <li>Charge in brackets must be a possible charge for the metal</li>
+                    <li>Note - If using an oxyganion (polyatomic anion with oxygen atoms) see <a href="#oxyanion-naming">oxyanion naming rules</a> for help with naming</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Binary Acids
+            </div>
+            <div class="col-9">
+                hydro{non-metal}ic acid (eg: hydrochloric acid -> HCl<sub>(aq)</sub>)
+                <ul>
+                    <li>1 element (non-metal)</li>
+                    <li>Prefix of 'hydro' on non-metal</li>
+                    <li>Non-metal ending replaced with 'ic' (eg, chlorine -> hydrochloric)</li>
+                    <li>Must add 'acid' to name</li>
+                </ul>
+            </div>
+            <div class="col-3" id="oxyanion-naming">
+                Oxyacids
+            </div>
+            <div class="col-9">
+                4 types of naming configurations:
+                {oxyanion}ic acid (no prefix/suffix of 'ic'/base # oxygen atoms)
+                per{oxyanion}ic acid (prefix of 'per'/suffix of 'ic'/1 more oxygen atom than base acid)
+                {oxyanion}ous acid (no prefix/suffix of 'ous'/1 less oxygen atom than base acid)
+                hypo{oxyanion}ous acid (prefix of 'hypo'/suffix of 'ous'/2 less oxygen atoms than base acid)
+                <ul>
+                    <li>The prefixes and suffixes of on the acid describes the # of oxygen atoms associated with it</li>
+                    <li>Here is an example of the 4 configurations using the oxyanion 'chlorate':</li>
+                    <li>1. chloric acid -> HClO<sub>3</sub> (base oxyanion) </li>
+                    <li>2. perchloric acid -> HClO<sub>4</sub></li>
+                    <li>3. chlorous acid -> HClO<sub>2</sub></li>
+                    <li>4. hypochlorous acid -> HClO</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Acid Radicals (non-multivalent)
+            </div>
+            <div class="col-9">
+                {cation} {greek prefix}hydrogen {polyatomic anion} (eg, aluminum hydrogen sulfite -> Al(HSO<sub>4</sub>)<sub>3</sub>)
+                <ul>
+                    <li>Hydrogen atoms and polyatomic anion form to create a negatively charged ion (eg, hydrogen sulfate -> HSO<sub>4</sub><sup>2-</sup></li>
+                    <li>The charge of the overall anion with hydrogen is determined by: (# hydrogen atoms) * (charge of hydrogen atom (+1)) + (charge of polyatomic anion)</li>
+                    <li>Note - charge of overall anion with hydrogen MUST BE NEGATIVE</li>
+                    <li># of hydrogen atoms specified by using greek prefixes (eg, dihydrogen = 2 hydrogen atoms)</li>
+                    <li>Note - If no greek prefix on hydrogen then 1 hydrogen atoms is assumed</li>
+                    <li>If using an oxyganion (polyatomic anion with oxygen atoms) see <a href="#oxyanion-naming">oxyanion naming rules</a> for help with naming</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Acid Radicals (multivalent)
+            </div>
+            <div class="col-9">
+                {cation} ({charge of cation}) {greek prefix}hydrogen {polyatomic anion} (eg, iron (III) hydrogen sulfite -> Fe(HSO<sub>4</sub>)<sub>3</sub>)
+                <ul>
+                    <li>Charge must be written in roman numerals and be surrounded by brackets</li>
+                    <li>Charge in brackets must be a possible charge for the cation</li>
+                    <li>All other rules for naming acid radicals are the same as non-multivalent acid radicals (seen above)</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Covalent Bonds
+            </div>
+            <div class="col-9">
+                {greek prefix (optional)}{nonmetal} {greek prefix}{nonmetal}ide (eg, sulfur monoxide -> SO)
+                <ul>
+                    <li>Prefixes -> 1: mono, 2: di, 3: tri, 4: tetra, 5: penta, 6: hexa, 7: hepta, 8: octa, 9: nona, 10: deca</li>
+                    <li>If no prefix on first element, counts as 1</li>
+                    <li>MUST be a prefix on second element</li>
+                </ul>
+            </div>
+            <div class="col-3" id="oxyanion-naming">
+                Oxyanion Naming Rules
+            </div>
+            <div class="col-9">
+                4 types of naming configurations:
+                {oxyanion}ate (no prefix/suffix of 'ate'/base # oxygen atoms)
+                per{oxyanion}ate (prefix of 'per'/suffix of 'ate'/1 more oxygen atom than base ion)
+                {oxyanion}ite (no prefix/suffix of 'ite'/1 less oxygen atom than base ion)
+                hypo{oxyanion}ite (prefix of 'hypo'/suffix of 'ite'/2 less oxygen atoms than base ion)
+                <ul>
+                    <li>The prefixes and suffixes of an oxyanion describes the # of oxygen atoms associated with it</li>
+                    <li>Here is an example of the 4 configurations using the oxyanion 'sulfate':</li>
+                    <li>1. sulfate -> SO<sub>4</sub> (base oxyanion) </li>
+                    <li>2. persulfate -> SO<sub>5</sub></li>
+                    <li>3. sulfite -> SO<sub>3</sub></li>
+                    <li>4. hyposulfite -> SO<sub>2</sub></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                Greek Prefixes
+            </div>
+            <div class="col-9">
+                {greek prefix (optional)}{nonmetal} {greek prefix}{nonmetal}ide (eg, sulfur monoxide -> SO)
+                <ul>
+                    <li>Prefixes -> 1: mono, 2: di, 3: tri, 4: tetra, 5: penta, 6: hexa, 7: hepta, 8: octa, 9: nona, 10: deca</li>
+                    <li>If no prefix on first element, counts as 1</li>
+                    <li>MUST be a prefix on second element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class='button my-2 d-flex justify-content-center'>
+        <a href="{{ url_for('home') }}" role='button' class='btn back-btn btn-outline-primary w-75 py-3 my-2'>Back</a>
+    </div>
+    <br>
+{% endblock content %}

@@ -1,0 +1,578 @@
+{
+    "elements": {
+        "hydrogen": {
+            "symbol": "H",
+            "charges": [1, -1]
+        },
+        "lithium": {
+            "symbol": "Li",
+            "charges": [1]
+        },
+        "beryllium": {
+            "symbol": "Be",
+            "charges": [2]
+        },
+        "boron": {
+            "symbol": "B",
+            "charges": [3]
+        },
+        "carbon": {
+            "symbol": "C",
+            "charges": [-4, 4, 2]
+        },
+        "nitrogen": {
+            "symbol": "N",
+            "charges": [-3, 5, 3]
+        },
+        "oxygen": {
+            "symbol": "O",
+            "charges": [-2]
+        },
+        "fluorine": {
+            "symbol": "F",
+            "charges": [-1]
+        },
+        "sodium": {
+            "symbol": "Na",
+            "charges": [1]
+        },
+        "magnesium": {
+            "symbol": "Mg",
+            "charges": [2]
+        },
+        "aluminum": {
+            "symbol": "Al",
+            "charges": [3]
+        },
+        "silicon": {
+            "symbol": "Si",
+            "charges": [4, -4]
+        },
+        "phosphorus": {
+            "symbol": "P",
+            "charges": [-3, 5, 3]
+        },
+        "sulfur": {
+            "symbol": "S",
+            "charges": [-2, 6, 4]
+        },
+        "sulphur": {
+            "symbol": "S",
+            "charges": [-2, 6, 4]
+        },
+        "chlorine": {
+            "symbol": "Cl",
+            "charges": [-1, 7, 5, 3]
+        },
+        "potassium": {
+            "symbol": "K",
+            "charges": [1]
+        },
+        "calcium": {
+            "symbol": "Ca",
+            "charges": [2]
+        },
+        "scandium": {
+            "symbol": "Sc",
+            "charges": [3]
+        },
+        "titanium": {
+            "symbol": "Ti",
+            "charges": [4, 3, 2]
+        },
+        "vanadium": {
+            "symbol": "V",
+            "charges": [5, 4, 3, 2]
+        },
+        "chromium": {
+            "symbol": "Cr",
+            "charges": [6, 3, 2]
+        },
+        "manganese": {
+            "symbol": "Mn",
+            "charges": [7, 4, 2]
+        },
+        "iron": {
+            "symbol": "Fe",
+            "charges": [3, 2]
+        },
+        "cobalt": {
+            "symbol": "Co",
+            "charges": [3, 2]
+        },
+        "nickel": {
+            "symbol": "Ni",
+            "charges": [3, 2]
+        },
+        "copper": {
+            "symbol": "Cu",
+            "charges": [2, 1]
+        },
+        "zinc": {
+            "symbol": "Zn",
+            "charges": [2]
+        },
+        "gallium": {
+            "symbol": "Ga",
+            "charges": [3]
+        },
+        "germanium": {
+            "symbol": "Ge",
+            "charges": [4, 2]
+        },
+        "arsenic": {
+            "symbol": "As",
+            "charges": [5, 4, -3]
+        },
+        "selenium": {
+            "symbol": "Se",
+            "charges": [-2, 4]
+        },
+        "bromine": {
+            "symbol": "Br",
+            "charges": [-1, 5, 3]
+        },
+        "rubidium": {
+            "symbol": "Rb",
+            "charges": [1]
+        },
+        "strontium": {
+            "symbol": "Sr",
+            "charges": [2]
+        },
+        "yttrium": {
+            "symbol": "Y",
+            "charges": [3]
+        },
+        "zirconium": {
+            "symbol": "Zr",
+            "charges": [4]
+        },
+        "niobium": {
+            "symbol": "Nb",
+            "charges": [5, 3]
+        },
+        "moleybdenum": {
+            "symbol": "Mo",
+            "charges": [6, 4]
+        },
+        "technetium": {
+            "symbol": "Tc",
+            "charges": [7, 4]
+        },
+        "ruthenium": {
+            "symbol": "Ru",
+            "charges": [4, 3]
+        },
+        "rhodium": {
+            "symbol": "Rh",
+            "charges": [3]
+        },
+        "palladium": {
+            "symbol": "Pd",
+            "charges": [4, 2]
+        },
+        "silver": {
+            "symbol": "Ag",
+            "charges": [1]
+        },
+        "cadmium": {
+            "symbol": "Cd",
+            "charges": [2]
+        },
+        "indium": {
+            "symbol": "In",
+            "charges": [3]
+        },
+        "tin": {
+            "symbol": "Sn",
+            "charges": [2, 4]
+        },
+        "antimony": {
+            "symbol": "Sb",
+            "charges": [3, 5, -3]
+        },
+        "tellurium": {
+            "symbol": "Te",
+            "charges": [4, 6, -2]
+        },
+        "iodine": {
+            "symbol": "I",
+            "charges": [-1, 7, 5, 3]
+        },
+        "caesium": {
+            "symbol": "Cs",
+            "charges": [1]
+        },
+        "cesium": {
+            "symbol": "Cs",
+            "charges": [1]
+        },
+        "barium": {
+            "symbol": "Ba",
+            "charges": [2]
+        },
+        "lutetium": {
+            "symbol": "Lu",
+            "charges": [3]
+        },
+        "hafnium": {
+            "symbol": "Hf",
+            "charges": [4]
+        },
+        "tantalum": {
+            "symbol": "Ta",
+            "charges": [5]
+        },
+        "tungsten": {
+            "symbol": "W",
+            "charges": [6, 4]
+        },
+        "rhenium": {
+            "symbol": "Re",
+            "charges": [7, 6, 4]
+        },
+        "osmium": {
+            "symbol": "Os",
+            "charges": [4, 3]
+        },
+        "iridium": {
+            "symbol": "Ir",
+            "charges": [4, 3]
+        },
+        "platinum": {
+            "symbol": "Pt",
+            "charges": [4, 2]
+        },
+        "gold": {
+            "symbol": "Au",
+            "charges": [3, 1]
+        },
+        "mercury": {
+            "symbol": "Hg",
+            "charges": [2, 1]
+        },
+        "thallium": {
+            "symbol": "Tl",
+            "charges": [3, 1]
+        },
+        "lead": {
+            "symbol": "Pb",
+            "charges": [2, 4]
+        },
+        "bismuth": {
+            "symbol": "Bi",
+            "charges": [3, 5]
+        },
+        "polonium": {
+            "symbol": "Po",
+            "charges": [4, 2]
+        },
+        "francium": {
+            "symbol": "Fr",
+            "charges": [1]
+        },
+        "radium": {
+            "symbol": "Ra",
+            "charges": [2]
+        },
+        "astitine": {
+            "symbol": "At",
+            "charges": [0]
+        },
+        "radon": {
+            "symbol": "Rn",
+            "charges": [0]
+        },
+        "lawrencium": {
+            "symbol": "Lr",
+            "charges": [0]
+        },
+        "rutherordium": {
+            "symbol": "Rf",
+            "charges": [0]
+        },
+        "dubnium": {
+            "symbol": "Db",
+            "charges": [0]
+        },
+        "seaborgium": {
+            "symbol": "Sg",
+            "charges": [0]
+        },
+        "bohrium": {
+            "symbol": "Bh",
+            "charges": [0]
+        },
+        "hassium": {
+            "symbol": "Hs",
+            "charges": [0]
+        },
+        "meitnerium": {
+            "symbol": "Mt",
+            "charges": [0]
+        },
+        "damstadium": {
+            "symbol": "Ds",
+            "charges": [0]
+        },
+        "roentgenium": {
+            "symbol": "Rg",
+            "charges": [0]
+        },
+        "copernicium": {
+            "symbol": "Cn",
+            "charges": [0]
+        },
+        "nihonium": {
+            "symbol": "Nh",
+            "charges": [0]
+        },
+        "flerovium": {
+            "symbol": "Fl",
+            "charges": [0]
+        },
+        "moscovium": {
+            "symbol": "Mc",
+            "charges": [0]
+        },
+        "livemorium": {
+            "symbol": "Lv",
+            "charges": [0]
+        },
+        "tennessine": {
+            "symbol": "Ts",
+            "charges": [0]
+        },
+        "oganesson": {
+            "symbol": "Og",
+            "charges": [0]
+        },
+        "lanthanum": {
+            "symbol": "La",
+            "charges": [3]
+        },
+        "cerium": {
+            "symbol": "Ce",
+            "charges": [3, 4]
+        },
+        "praseodymium": {
+            "symbol": "Pr",
+            "charges": [3]
+        },
+        "neodymium": {
+            "symbol": "Nd",
+            "charges": [3]
+        },
+        "promethium": {
+            "symbol": "Pm",
+            "charges": [3]
+        },
+        "samarium": {
+            "symbol": "Sm",
+            "charges": [3]
+        },
+        "europium": {
+            "symbol": "Eu",
+            "charges": [3, 2]
+        },
+        "gadolinium": {
+            "symbol": "Gd",
+            "charges": [3]
+        },
+        "terbium": {
+            "symbol": "Tb",
+            "charges": [3]
+        },
+        "dysprosmium": {
+            "symbol": "Dy",
+            "charges": [3]
+        },
+        "holmium": {
+            "symbol": "Ho",
+            "charges": [3]
+        },
+        "erbium": {
+            "symbol": "Er",
+            "charges": [3]
+        },
+        "thulium": {
+            "symbol": "Tm",
+            "charges": [3]
+        },
+        "ytterbium": {
+            "symbol": "Yb",
+            "charges": [3, 2]
+        },
+        "actinium": {
+            "symbol": "Ac",
+            "charges": [3]
+        },
+        "thorium": {
+            "symbol": "Th",
+            "charges": [4]
+        },
+        "proactinium": {
+            "symbol": "Pa",
+            "charges": [5, 4]
+        },
+        "uranium": {
+            "symbol": "U",
+            "charges": [6, 3, 4, 5]
+        },
+        "neptunium": {
+            "symbol": "Np",
+            "charges": [5, 3, 4]
+        },
+        "plutonium": {
+            "symbol": "Pu",
+            "charges": [6, 5, 3]
+        },
+        "americium": {
+            "symbol": "Am",
+            "charges": [6, 5, 4]
+        },
+        "curium": {
+            "symbol": "Cm",
+            "charges": [3]
+        },
+        "berkelium": {
+            "symbol": "Bk",
+            "charges": [4, 3]
+        },
+        "californium": {
+            "symbol": "Cf",
+            "charges": [3]
+        },
+        "einsteinium": {
+            "symbol": "Es",
+            "charges": [0]
+        },
+        "fermium": {
+            "symbol": "Fm",
+            "charges": [0]
+        },
+        "mendelevium": {
+            "symbol": "Md",
+            "charges": [0]
+        },
+        "nobelium": {
+            "symbol": "No",
+            "charges": [0]
+        },
+        "helium": {
+            "symbol": "He",
+            "charges": [0]
+        },
+        "neon": {
+            "symbol": "Ne",
+            "charges": [0]
+        },
+        "argon": {
+            "symbol": "Ar",
+            "charges": [0]
+        },
+        "krypton": {
+            "symbol": "Kr",
+            "charges": [0]
+        },
+        "xenon": {
+            "symbol": "Xe",
+            "charges": [0]
+        }
+    },
+    "polyatomicIons": {
+        "ammonium": {
+            "symbol": "NH4",
+            "charge": 1
+        },
+        "acetate": {
+            "symbol": "C2H3O2",
+            "charge": -1
+        },
+        "arsenate": {
+            "symbol": "AsO4",
+            "charge": -3
+        },
+        "borate": {
+            "symbol": "BO3",
+            "charge": -3
+        },
+        "bromate": {
+            "symbol": "BrO3",
+            "charge": -1
+        },
+        "carbonate": {
+            "symbol": "CO3",
+            "charge": -2
+        },
+        "chlorate": {
+            "symbol": "ClO3",
+            "charge": -1
+        },
+        "chromate": {
+            "symbol": "CrO4",
+            "charge": -2
+        },
+        "cyanide": {
+            "symbol": "CN",
+            "charge": -1
+        },
+        "cyanate": {
+            "symbol": "OCN",
+            "charge": -1
+        },
+        "dichromate": {
+            "symbol": "Cr2O7",
+            "charge": -2
+        },
+        "hydroxide": {
+            "symbol": "OH",
+            "charge": -1
+        },
+        "iodate": {
+            "symbol": "IO3",
+            "charge": -1
+        },
+        "nitrate": {
+            "symbol": "NO3",
+            "charge": -1
+        },
+        "oxalate": {
+            "symbol": "C2O4",
+            "charge": -2
+        },
+        "manganate": {
+            "symbol": "MnO3",
+            "charge": -1
+        },
+        "peroxide": {
+            "symbol": "O2",
+            "charge": -2
+        },
+        "phosphate": {
+            "symbol": "PO4",
+            "charge": -3
+        },
+        "silicate": {
+            "symbol": "SiO3",
+            "charge": -4
+        },
+        "sulfate": {
+            "symbol": "SO4",
+            "charge": -2
+        },
+        "sulphate": {
+            "symbol": "SO4",
+            "charge": -2
+        },
+        "thiocyanate": {
+            "symbol": "SCN",
+            "charge": -1
+        },
+        "thiosulfate": {
+            "symbol": "S2O3",
+            "charge": -2
+        }
+    }
+}

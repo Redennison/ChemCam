@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+    padding-top: .6rem;
+    font-size: 3rem;
+}
+
+.flash-message {
+    margin-top: 1rem;
+}
+
+.chem-image {
+    max-width: 100%;
+}
+
+.formula-name-label {
+    font-size: 1.3rem;
+}
+
+.past-conversion {
+    font-size: 1.5rem;
+}
+
+.submit-btn {
+    font-size: 1.1rem;
+}
+
+.chemical-formula {
+    font-size: 20vw;
+}
+
+.help-section {
+    padding-top: 20px;
+}
+
+.back-btn {
+    max-width: 400px;
+}
+
+@media screen and (min-width: 1000px) {
+    .chemical-formula {
+       font-size: 200px;
+    }
+}

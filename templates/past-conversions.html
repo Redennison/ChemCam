@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <h1 class='text-center'>Past Conversions</h1>
+
+    <div class='text-center my-5'>
+        {{ pastConversions|safe }}
+    </div>
+
+    <div class='button my-2 fixed-bottom d-flex justify-content-center'>
+        <a href="{{ url_for('home') }}" role='button' class='btn back-btn btn-outline-primary w-75 py-3 my-2'>Back</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <h1 class='text-center'>ChemCam</h1>
+    <p class='text-center'>Converts formula names to chemical formulas!</p>
+
+    <div class='img-container d-flex justify-content-center'>
+        <img class='chem-image my-2' src="{{ url_for('static', filename='img/home.svg') }}" alt="">
+    </div>
+
+    <div class='buttons d-flex flex-column'>
+        <a href="{{ url_for('convert') }}" role='button' class='btn btn-outline-primary py-3 my-2'>Convert</a>
+        <a href="{{ url_for('pastConversions') }}" role='button' class='btn btn-outline-primary py-3 my-2'>Past Conversions</a>
+        <a href="{{ url_for('helpScreen') }}" role='button' class='btn btn-outline-primary py-3 my-2'>Help</a>
+    </div>
+{% endblock content %}
